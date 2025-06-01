@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Chat</title>
+    <link rel="stylesheet" href="/stylesheets/newChats.css" />
+  </head>
+  <body>
+    <h1>Write Letter :</h1>
+    <form action="/chats/<%=chat._id%>" method="post">
+      <input type="hidden" name="to" value="<%=  chat.to  %>" />
+      <input
+        type="text"
+        name="to"
+        placeholder="To : <%=chat.to%>"
+        value="<%=chat.to%>"
+        disabled
+      /><br />
+      <input type="text" name="message" value="<%=chat.message%>" /><br />
+      <input type="hidden" name="from" value="<%=chat.from%>" />
+      <input
+        type="text"
+        name="from"
+        placeholder="From : <%=chat.from%>"
+        value="<%=chat.from%>"
+        disabled
+      /><br />
+      <input type="submit" value="Update" />
+    </form>
+  </body>
+</html>
